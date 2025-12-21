@@ -30,3 +30,17 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
+
+---
+spring:
+  config:
+    activate:
+      on-profile: kubernetes
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://spring-petclinic-discovery-server:8761/eureka/
+management:
+  zipkin:
+    tracing:
+      endpoint: http://spring-petclinic-tracing-server:9411/api/v2/spans
