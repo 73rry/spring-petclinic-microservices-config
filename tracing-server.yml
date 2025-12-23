@@ -30,3 +30,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://spring-petclinic-discovery-server:8761/eureka/ 
+  instance:
+    hostname: spring-petclinic-${spring.application.name}
