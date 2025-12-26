@@ -30,6 +30,7 @@ spring:
       on-profile: kubernetes
 server:
   port: 8082
+  forward-headers-strategy: none
 eureka:
   client:
     serviceUrl:
